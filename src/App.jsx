@@ -1,11 +1,11 @@
-// src/App.jsx
+
 import { Container, Typography, Divider } from '@mui/material'
-import Grid from '@mui/material/Grid'          // Grid clásico (v1)
+import Grid from '@mui/material/Grid'         
 import Ficha from './components/Ficha.jsx'
 import FormRegistro from './components/FormRegistro.jsx'
 
 export default function App() {
-  // Lista para el map (deja fuera al zorro para no duplicarlo)
+
   const animals = [
     { id: 1, animal: 'perro',   atribute: 'bello',    imageUrl: '/perro.jpg',    imageSize: 150, description: 'Perro callejero' },
     { id: 2, animal: 'loro',    atribute: 'hablador', imageUrl: '/pajaro.jpg',   imageSize: 150, description: 'Loro de la jungla' },
@@ -14,13 +14,12 @@ export default function App() {
 
   return (
     <Container sx={{ py: 4 }}>
-      {/* Sección 1: ZORRO + FORMULARIO */}
       <Grid container spacing={3}>
         <Grid item xs={12} md={5}>
           <Ficha
             animal="zorro"
             atribute="curioso"
-            imageUrl="/zorro.jpg"   // pon la imagen en /public/zorro.jpg
+            imageUrl="/zorro.jpg"   
             imageSize={180}
             description="El zorro de la portada"
           />
@@ -31,8 +30,6 @@ export default function App() {
       </Grid>
 
       <Divider sx={{ my: 4 }} />
-
-      {/* Sección 2: OTRAS FICHAS con map */}
       <Typography variant="h5" component="h2" sx={{ mb: 2 }}>
         Otras fichas
       </Typography>
